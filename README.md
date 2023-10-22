@@ -10,5 +10,5 @@ npm install beam-http-service
 ## Usage
 
 ```js
-var { http: HTTP } = require('http-service')();
+var { http: HTTP } = require('beam-http-service')();
 ```
