@@ -1,0 +1,31 @@
+{
+  "name": "beam-http-service",
+  "version": "1.0.0",
+  "description": "A BeamJS service for http requests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "peerDependencies": {
+    "beamjs": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quaNode/http-service.git"
+  },
+  "keywords": [
+    "http",
+    "service",
+    "request",
+    "nodejs",
+    "beamjs",
+    "behaviour",
+    "behavior"
+  ],
+  "author": "Ahmed Ragab <ahmed.ragab@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quaNode/http-service/issues"
+  },
+  "homepage": "https://github.com/quaNode/http-service#readme"
+}
