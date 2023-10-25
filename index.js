@@ -20,7 +20,7 @@ module.exports = function (options) {
         baseURL,
         serialize,
         deserialize,
-        content_type
+        contentType
       } = request.context;
       if (!baseURL) baseURL = options.baseURI;
       if (typeof baseURL !== 'string' || baseURL.length < 10) {
@@ -45,8 +45,8 @@ module.exports = function (options) {
         method: request.method,
         headers: Object.assign(request.body ? {
 
-          'Content-Type': content_type || options.content_type || 'application/json',
-          'Content-Length': Buffer.byteLength(request.body),
+          'Content-Type': contentType || options.contentType || 'application/json',
+          'Content-Length': Buffer.byteLength(request.body)
         } : {}, request.headers || {})
       }, function (res) {
 
@@ -71,7 +71,8 @@ module.exports = function (options) {
 
             return callback(null, e);
           }
-          callback(response);
+          var { headers } = res;
+          callback({ headers, response });
         });
         res.on('error', function (e) {
 
